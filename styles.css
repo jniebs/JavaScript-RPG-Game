@@ -1,46 +1,109 @@
 body {
-    background-color: #0a0a23;
-  }
-  
-  #text {
-    background-color: #0a0a23;
-    color: #ffffff;
-    padding: 10px;
-  }
-  
+  background-color: #1a1a2e; /* Darker, mystical background */
+  font-family: 'Arial', sans-serif; /* Fallback font */
+  color: #e0e0e0; /* Softer text color for readability */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1920x1080?fantasy'); /* Subtle background image */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#game {
+  max-width: 600px; /* Slightly wider for better layout */
+  background: rgba(10, 10, 35, 0.95); /* Semi-transparent dark background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  margin: 20px;
+  padding: 20px;
+  backdrop-filter: blur(5px); /* Glassmorphism effect */
+}
+
+#text {
+  background: rgba(0, 0, 0, 0.7); /* Darker text area for contrast */
+  color: #f0f0f0;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+#stats, #controls {
+  border: 1px solid #4a4a6a; /* Softer border color */
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: rgba(20, 20, 50, 0.8); /* Subtle background for sections */
+}
+
+#stats {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #e0e0e0;
+}
+
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#monsterStats {
+  display: none;
+  border: 1px solid #c70d0d;
+  border-radius: 8px;
+  padding: 10px;
+  color: #ffffff;
+  background: linear-gradient(45deg, #c70d0d, #a10b0b); /* Gradient for monster stats */
+  margin-bottom: 10px;
+}
+
+.stat {
+  padding-right: 15px;
+  font-size preoccupation: 1em;
+}
+
+button {
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(45deg, #feac32, #ffcc4c); /* Vibrant gradient */
+  border: 2px solid #feac32;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 5px;
+}
+
+button:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+  box-shadow: 0 4px 15px rgba(254, 172, 50, 0.5); /* Glow effect */
+}
+
+button:active {
+  transform: scale(0.95); /* Click feedback */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
   #game {
-    max-width: 500px;
-    max-height: 400px;
-    background-color: #ffffff;
-    color: #ffffff;
-    margin: 30px auto 0px;
-    padding: 10px;
+    max-width: 90%;
+    padding: 15px;
   }
-  
-  #controls,
-  #stats {
-    border: 1px solid #0a0a23;
-    padding: 5px;
-    color: #0a0a23;
-  }
-  
-  #monsterStats {
-    display: none;
-    border: 1px solid #0a0a23;
-    padding: 5px;
-    color: #ffffff;
-    background-color: #c70d0d;
-  }
-  
-  .stat {
-    padding-right: 10px;
-  }
-  
+
   button {
-    cursor: pointer;
-    color: #0a0a23;
-    background-color: #feac32;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border: 3px solid #feac32;
-    margin: 3px;
+    padding: 8px 15px;
+    font-size: 0.9em;
   }
+
+  .stat {
+    font-size: 0.9em;
+  }
+}
